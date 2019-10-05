@@ -1,0 +1,21 @@
+.ctext {
+	text-align: justify;
+}
+
+.mainH {
+	border: none;
+}
+
+.mainNav {
+	color: #fff;
+}
+
+.clear {
+	clear: both;
+}
+
+@media (max-width: 700px) {
+	.slider {
+		display: none;
+	}
+}
