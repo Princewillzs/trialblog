@@ -4,13 +4,13 @@ import { Carousel, CarouselItem, CarouselControl, CarouselIndicators, CarouselCa
 const items = [
 	{
 		src: '/img/slider1.jpg',
-		altText: 'Love of Children',
-		caption: 'Child Love'
+		altText: 'Child Love',
+		caption: 'Love of Children'
 	},
 	{
 		src: '/img/slider2.jpg',
-		altText: 'Family One Love',
-		caption: 'Child will grow'
+		altText: 'Child will grow',
+		caption: 'Family One Love'
 	},
 	{
 		src: '/img/slider3.jpg',
@@ -62,13 +62,13 @@ class Slider extends Component {
 			return (
 				<CarouselItem onExiting={this.onExiting} onExited={this.onExited} key={item.src}>
 					<img src={item.src} alt={item.altText} />
-					<CarouselCaption captionText={item.caption} captionHeader={item.caption} />
+					<CarouselCaption captionText={item.caption} />
 				</CarouselItem>
 			);
 		});
 
 		return (
-			<Carousel className="slider" activeIndex={activeIndex} next={this.next} previous={this.previous}>
+			<Carousel className="slider sld1" activeIndex={activeIndex} next={this.next} previous={this.previous}>
 				<CarouselIndicators items={items} activeIndex={activeIndex} onClickHandler={this.goToIndex} />
 				{slides}
 				<CarouselControl direction="prev" directionText="Previous" onClickHandler={this.previous} />

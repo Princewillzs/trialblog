@@ -4,7 +4,7 @@ import Post from './Post';
 import Service from './Service';
 import Partners from './Partners';
 
-export class Home extends Component {
+class Home extends Component {
 	state = {
 		Article1: [
 			{
@@ -62,6 +62,11 @@ export class Home extends Component {
 			}
 		]
 	};
+
+	removePost = (id) => {
+		const Article2 = this.state.Article2.filter((conf) => conf.id !== id);
+		this.setState({ Article2 });
+	};
 	render() {
 		let details = this.state.Article1.map((article) => {
 			return (
@@ -74,7 +79,12 @@ export class Home extends Component {
 		let services = this.state.Article2.map((meeting) => {
 			return (
 				<Col>
-					<Service services={meeting} />
+					<Service
+						key={this.state.Article2.id}
+						id={this.state.Article2.id}
+						removePost={this.removePost.bind(this)}
+						services={meeting}
+					/>
 				</Col>
 			);
 		});
