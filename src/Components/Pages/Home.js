@@ -63,26 +63,38 @@ class Home extends Component {
 		]
 	};
 
-	removePost = (id) => {
-		const Article2 = this.state.Article2.filter((conf) => conf.id !== id);
-		this.setState({ Article2 });
+	// removePost = (id) => {
+	// 	const Article2 = this.state.Article2.filter((Article) => Article.id !== id);
+	// 	this.setState({ Article2: Article2 });
+	// };
+
+	removePost = (personIndex) => {
+		const Article2 = this.state.Article2;
+		Article2.splice(personIndex, 1);
+		this.setState({ Article2: Article2 });
+	};
+
+	removePost1 = (personIndex) => {
+		const Article1 = this.state.Article1;
+		Article1.splice(personIndex, 1);
+		this.setState({ Article1: Article1 });
 	};
 	render() {
-		let details = this.state.Article1.map((article) => {
+		let details = this.state.Article1.map((article, index) => {
 			return (
 				<Col>
-					<Post details={article} />
+					<Post details={article} removePost1={() => this.removePost1(index)} key={this.state.Article1.id} />
 				</Col>
 			);
 		});
 
-		let services = this.state.Article2.map((meeting) => {
+		let services = this.state.Article2.map((meeting, index) => {
 			return (
 				<Col>
 					<Service
 						key={this.state.Article2.id}
 						id={this.state.Article2.id}
-						removePost={this.removePost.bind(this)}
+						removePost={() => this.removePost(index)}
 						services={meeting}
 					/>
 				</Col>
