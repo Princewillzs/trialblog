@@ -1,5 +1,10 @@
 .ctext {
 	text-align: justify;
+	font-size: 1.2rem;
+}
+
+.ctexe1 {
+	font: #fff;
 }
 
 .mainH {
@@ -15,8 +20,12 @@
 }
 
 .sld1 {
-	color: #460e0e;
 	font-size: 3rem;
+}
+
+.stext {
+	color: #eee8e8ea;
+	font-weight: bolder;
 }
 
 @media (max-width: 700px) {

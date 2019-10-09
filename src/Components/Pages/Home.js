@@ -60,7 +60,14 @@ class Home extends Component {
 				post:
 					'This is the story about the student life. It gives a moral lesson to all fun-loving students who spend their valuable time in enjoying parties, movies, etc and not serious in studies because every moment of student life is valuable and time must be utilized by the students in regular studies . Now-a-days, students think that student life is very easy and full of fun today especially college life of the students. But the future of students depend upon their achievements in student life because the fun-loving students of today used smart ways to get good marks in examination which is shown in my story. This is as follows:- Ashish and Amit were studying in the college.Both were classmates as well as roommates in the hostel room.Ashish was a studious boy but Amit was a fun- loving boy and was not serious in studies.Ashish used to study regularly to get good marks in exams whereas Amit was not serious in studies and used to study “Guess Paper”, “One - day Series “, etc.to get good marks in exams.'
 			}
-		]
+		],
+		Article4: {
+			id: 'ba2',
+			img: '/img/conf.jpg',
+			title: 'How to Cover Meetings',
+			post:
+				'Pick a few key issues on the agenda that you will focus on. Look for the issues that are the most newsworthy, controversial or interesting. If you’re not sure what’s newsworthy, ask yourself: which of the issues on the agenda will affect the most people in the community? Chances are, the more people affected by an issue, the more newsworthy it is. For example, if the school board is about to raise property taxes 3 percent, that’s an issue that will affect every homeowner in your town.Newsworthy, Absolutely.Likewise, is the board is debating whether to ban some books from school libraries after being pressured by religious groups, that’s bound to be controversial and newsworthy.'
+		}
 	};
 
 	// removePost = (id) => {
@@ -82,7 +89,7 @@ class Home extends Component {
 	render() {
 		let details = this.state.Article1.map((article, index) => {
 			return (
-				<Col>
+				<Col xs="12" md="4">
 					<Post details={article} removePost1={() => this.removePost1(index)} key={this.state.Article1.id} />
 				</Col>
 			);
@@ -90,7 +97,7 @@ class Home extends Component {
 
 		let services = this.state.Article2.map((meeting, index) => {
 			return (
-				<Col>
+				<Col xs="12" md="9">
 					<Service
 						key={this.state.Article2.id}
 						id={this.state.Article2.id}
@@ -101,9 +108,17 @@ class Home extends Component {
 			);
 		});
 
+		let service2 = (
+			<Col xs="12 ctext ctex1" md="3">
+				<img className="img-fluid mt-2" src="/img/library.jpg" alt="img" />
+				{this.state.Article4.post}
+				<img className="img-fluid" src="/img/camera.jpg" alt="img" />
+			</Col>
+		);
+
 		let partner = this.state.Article3.map((nature) => {
 			return (
-				<Col>
+				<Col xs="12" md="4">
 					<Partners partner={nature} />
 				</Col>
 			);
@@ -112,7 +127,9 @@ class Home extends Component {
 			<div>
 				<Container>
 					<Row>{details}</Row>
-					<Row>{services}</Row>
+					<Row>
+						{services} {service2}
+					</Row>
 					<Row>{partner}</Row>
 				</Container>
 			</div>
