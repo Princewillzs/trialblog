@@ -2,7 +2,7 @@
 	"name": "sample",
 	"version": "0.1.0",
 	"private": true,
-	"homepage": "https://Princewillzs/github.io/natureBlog.git",
+	"homepage": "https://Princewillzs.github.io/reactwork",
 	"engine": {
 		"node": "10.16.3",
 		"npm": "6.9.0"
