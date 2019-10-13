@@ -1,3 +1,9 @@
+Project created with Reactjs, Bootstrap, Reactstrap and Styled-component.
+Difficulty in displaying the images stored in a sepearte folder in the public folder of the project. still working on it to make it display.
+I had challenges deploying this project to github but later solved it.
+The other pages are yet to be developed and I intend to use React-Router on them.
+Will later link it to a database.
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
