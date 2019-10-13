@@ -97,7 +97,7 @@ class Home extends Component {
 
 		let services = this.state.Article2.map((meeting, index) => {
 			return (
-				<Col xs="12" md="9">
+				<Col xs="12" md="7">
 					<Service
 						key={this.state.Article2.id}
 						id={this.state.Article2.id}
@@ -109,7 +109,7 @@ class Home extends Component {
 		});
 
 		let service2 = (
-			<Col xs="12 ctext ctex1" md="3">
+			<Col xs="12 ctext ctex1" md="5">
 				<img className="img-fluid mt-2" src="/img/library.jpg" alt="img" />
 				{this.state.Article4.post}
 				<img className="img-fluid" src="/img/camera.jpg" alt="img" />
